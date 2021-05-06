@@ -495,15 +495,17 @@ img {
   }
   .navbar__search {
     margin-left: auto;
-    max-width: 340px;
   }
-  .navbar__search-menu {
+  .navbar-menu {
     padding-top: 22px;
     padding-bottom: 22px;
   }
-  .navbar__search-menu__link {
+  .navbar-menu__link {
     font-size: 12px;
     line-height: 15px;
+  }
+  .search__input {
+    width: 340px;
   }
 }
 
@@ -520,6 +522,7 @@ img {
     display: flex;
     width: 16px;
     height: 11px;
+    padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
