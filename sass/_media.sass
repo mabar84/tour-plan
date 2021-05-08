@@ -9,7 +9,7 @@
     width: 133px
   .navbar
     &-top
-      padding-top: 30px
+      padding-top: 31px
       padding-bottom: 30px
     &__search
       margin-left: auto
@@ -24,6 +24,14 @@
     margin-left: 47px
     &__input
       width: 340px
+  .hotel
+    padding-top: 18px
+    padding-bottom: 70px
+    &-info
+      &__name
+        margin: 0
+      &__rating
+        // padding: 0
 @media (max-width: 767px)
   .container
     max-width: 576px
@@ -47,8 +55,9 @@
         height: 1px
         background-color: $text-color
   .stars
-    flex-basis: auto
+    flex-basis: 23%
   .hotel
+    padding-top: 0
     &-name
       flex-basis: 100%
     &-wrapper
@@ -62,7 +71,6 @@
       &__rating
         display: none
       &__offer
-
         margin-left: 0
         order: -1
 @media (max-width: 575px)
