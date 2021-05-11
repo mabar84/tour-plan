@@ -41,9 +41,8 @@
   &__slider
     margin-left: 0
   &-slider
-    max-width: 728px
-    min-height: 450px
-    object-fit: content
+    max-width: 100%
+    min-height: 100%
     position: relative
     border-radius: 8px
     &::after
@@ -55,6 +54,9 @@
       left: 0
       background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
       z-index: 10
+  .slider
+    width: 728px
+    height: 450px
     &__button
       position: absolute
       top: 50%
@@ -169,5 +171,5 @@
 .map
   width: 347px
   height: 213px
-  background-color: #000
-  border-radius: 4px
+  border-radius: 10px
+  overflow: hidden
