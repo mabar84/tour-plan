@@ -1,8 +1,9 @@
 @media (max-width: 1199px)
   .container
-    max-width: 960px
+    max-width: 92%
   .slider
-    width: 590px
+    margin-right: 30px
+    max-width: 728px
   .swiper
     &-slide
       &__image
@@ -11,7 +12,7 @@
         object-fit: cover
 @media (max-width: 991px)
   .container
-    max-width: 700px
+    max-width: 91.1%
   .logo
     width: 133px
   .navbar
@@ -34,18 +35,29 @@
   .hotel
     padding-top: 18px
     padding-bottom: 70px
+    &-info
+      &__name
+        margin-top: 0px
     &-grid
-      flex-direction: column
+      flex-direction: column  
     &__slider
+      margin: auto
       margin-bottom: 30px
     &-right
       flex-direction: row
   .booking
-    width: 340px
-  .slider
-    width: 100%
+    width: 49%
+    height: 210px
+    margin-right: 20px
+    padding-top: 25px
+    padding-right: 23px
+    padding-bottom: 38px
+    padding-left: 23px
   .map
-    width: 340px
+    width: 49%
+    height: 210px
+  .slider
+    width: 100%  
     &-info
       &__name
         margin: 0
@@ -53,7 +65,7 @@
         // padding: 0
 @media (max-width: 767px)
   .container
-    max-width: 576px
+    max-width: 92%
   .navbar
     &__search, &-menu, &__user
       display: none
@@ -102,9 +114,10 @@
     width: 100%
   .map
     width: 100%
+ 
 @media (max-width: 575px)
   .container
-    max-width: 87.5%
+    max-width: 92%
   .navbar
     &-top
       padding-top: 24px
@@ -112,8 +125,25 @@
     width: 99px
   .slider
     height: 250px
+  
+@media (max-width: 320px)
+  .container
+    max-width: 87%  
   .hotel
     &__slider
-      margin-bottom: 20px
+      width: 278px
+      height: 179px
+      margin-top: 18px
+      margin-bottom: 0
+  .booking
+    width: 279px
+    height: 210px
+    margin: auto
+    margin-bottom: 0
+  .map
+    margin: auto
+    width: 280px
+    height: 172px
+
 
 
