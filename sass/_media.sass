@@ -1,9 +1,10 @@
 @media (max-width: 1199px)
   .container
     max-width: 92%
-  .slider
-    margin-right: 30px
-    max-width: 728px
+  .hotel
+    &-slider
+      margin-right: 30px
+      max-width: 728px
   .swiper
     &-slide
       &__image
@@ -36,6 +37,8 @@
   .hotel
     padding-top: 18px
     padding-bottom: 70px
+    &-slider
+      width: 100%
     &-info
       &__name
         margin-top: 0px
@@ -56,14 +59,7 @@
     padding-left: 23px
   .map
     width: 49%
-    height: 210px
-  .slider
-    width: 100%  
-    &-info
-      &__name
-        margin: 0
-      &__rating
-        // padding: 0
+    height: 210px 
 @media (max-width: 767px)
   .container
     max-width: 92%
@@ -105,9 +101,9 @@
       &__offer
         order: -1
         margin-left: 0
-  .slider
-    height: 350px
   .hotel
+    &-slider
+      height: 350px
     &-right
       flex-direction: column
       min-height: 450px
@@ -139,8 +135,9 @@
       padding-top: 24px
   .logo
     width: 99px
-  .slider
-    height: 250px
+  .hotel
+    &-slider
+      height: 250px
 @media (max-width: 320px)
   .container
     max-width: 87%  
