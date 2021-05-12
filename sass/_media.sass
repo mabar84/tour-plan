@@ -11,7 +11,8 @@
         height: 100%
         object-fit: cover
 @media (max-width: 991px)
-  .container
+  .container, 
+  .newsletter-wrapper
     max-width: 91.1%
   .logo
     width: 133px
@@ -114,7 +115,22 @@
     width: 100%
   .map
     width: 100%
- 
+  .newsletter
+    padding: 76px 0 83px 0
+    &__title
+      margin-bottom: 37px
+    &-wrapper
+      max-width: 92%
+      flex-direction: column
+      align-items: start
+    &-title    
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        font-size: 30px
+        line-height: 38px
+  .subscribe
+    width: 280px
 @media (max-width: 575px)
   .container
     max-width: 92%
@@ -125,7 +141,6 @@
     width: 99px
   .slider
     height: 250px
-  
 @media (max-width: 320px)
   .container
     max-width: 87%  
@@ -135,6 +150,15 @@
       height: 179px
       margin-top: 18px
       margin-bottom: 0
+    &-slider
+      &__button
+        width: 18px
+        height: 18px
+        background-size: 7px
+        &--next
+          right: 7px
+        &--prev
+          left: 7px
   .booking
     width: 279px
     height: 210px
@@ -144,6 +168,3 @@
     margin: auto
     width: 280px
     height: 172px
-
-
-

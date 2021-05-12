@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-  </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +31,7 @@
         </form>
 
         <a href="#" class="user navbar__user">
-          <img src="img/user-avatar.jpeg" alt="Avatar: Nathan" class="user__avatar">
+          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
           <span class="user__name">Nathan</span>
         </a>
         <!-- /.user -->
@@ -195,33 +193,23 @@
     </div>
     <!-- /.container -->
   </section>
+  <section class="newsletter">
+    <div class="newsletter-wrapper">
+      <h2 class="newsletter-title newsletter__title">
+        subscribe to our
+        <span class="newsletter-title__strong">Newsletter</span>
+      </h2>
+      <form action="#" class="subscribe newsletter__subscribe">
+        <input type="text" class="subscribe__input" placeholder="Your email address">
+        <button class="subscribe__button">Send</button>
+      </form>
 
-  <div class="container yandex-container">
-    <div id="map" style="width: 280px; height: 280px"></div>
-  </div>
-
+    </div>
+    <!-- /.newsletter-wrapper -->
+  </section>
 
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
-
-  <script type="text/javascript">
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-    function init() {
-      // Создание карты.
-      var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [7.88993, 98.295115],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 7
-      });
-    }
-  </script>
 
 </body>
 
