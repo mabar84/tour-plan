@@ -36,7 +36,7 @@
       width: 340px
   .hotel
     padding-top: 18px
-    padding-bottom: 70px
+    padding-bottom: 60px
     &-slider
       width: 100%
     &-info
@@ -59,7 +59,26 @@
     padding-left: 23px
   .map
     width: 49%
-    height: 210px 
+    height: 210px
+  .newsletter
+    padding-top: 71px
+  .reviews
+    padding: 40px 0 60px 0
+    &-slider
+      &__item
+        max-width: 580px
+      &__button
+        top: 50%
+        transform: translateY(-50%)
+        background-size: 30px
+        &--prev
+          left: 1px
+        &--next        
+          right: 1px
+    &__title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
 @media (max-width: 767px)
   .container
     max-width: 92%
@@ -127,6 +146,29 @@
         line-height: 38px
   .subscribe
     width: 280px
+  .reviews
+    padding: 40px 0 50px 0
+    &-slider
+      &__item
+        padding: 0 30px 30px
+        &:after, &::before
+          display: none
+      &__button
+        top: 29px
+        &--prev
+          margin-left: -70px
+          left: 50%
+          transform: translate(-50%, 0)
+        &--next
+          margin-right: -70px
+          right: 50%
+          transform: translate(50%, 0)
+    &__title
+      padding: 0 38px
+      font-size: 18px
+      line-height: 22px
+      margin-bottom: 42px
+
 @media (max-width: 575px)
   .container
     max-width: 92%
@@ -142,11 +184,12 @@
   .container
     max-width: 87%  
   .hotel
+    padding-bottom: 15px
     &__slider
       width: 278px
       height: 179px
       margin-top: 18px
-      margin-bottom: 0
+      margin-bottom: -4px
     &-slider
       &__button
         width: 18px
@@ -160,8 +203,20 @@
     width: 279px
     height: 210px
     margin: auto
-    margin-bottom: 0
+    margin-bottom: 3px
   .map
     margin: auto
     width: 280px
     height: 172px
+  .newsletter
+    height: 319px
+    padding: 65px 0 83px 7px
+  .reviews
+    &-slider      
+      &__button        
+        &--prev
+          top: 32px
+          left: 116px
+        &--next
+          top: 32px
+          right: 120px
