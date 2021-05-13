@@ -820,10 +820,6 @@ input, button {
   position: relative;
   padding: 78px 0 87px 0;
   height: 260px;
-  background-image: url(../img/newsletter-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .newsletter::before {
@@ -864,6 +860,11 @@ input, button {
   font-size: 36px;
   line-height: 45px;
   text-transform: uppercase;
+}
+
+.parallax-window {
+  min-height: 260px;
+  background: transparent;
 }
 
 .subscribe {
