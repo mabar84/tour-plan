@@ -70,6 +70,8 @@
     &-slider
       &__item
         max-width: 580px
+        &:before, &::after
+          display: none
       &__button
         top: 50%
         transform: translateY(-50%)
@@ -215,6 +217,8 @@
     max-width: 87%  
   .hotel
     padding-bottom: 15px
+    &-info
+      padding-bottom: 19px
     &__slider
       width: 278px
       height: 179px
@@ -222,13 +226,13 @@
       margin-bottom: -4px
     &-slider
       &__button
-        width: 18px
-        height: 18px
-        background-size: 7px
+        width: 11px
+        height: 11px
+        background-size: 5px
         &--next
-          right: 7px
+          right: 5px
         &--prev
-          left: 7px
+          left: 3px
   .booking
     width: 279px
     height: 210px
@@ -238,7 +242,20 @@
     margin: auto
     width: 280px
     height: 172px
+  .newsletter
+    &-title
+      &__strong
+        margin-top: 4px
+        margin-bottom: 37px
+    &__title
+      margin-top: 13px
+      margin-bottom: 0px
+  .subscribe
+    &__input
+      padding-left: 20px
   .reviews
+    &__title
+      margin-bottom: 44px
     &-slider      
       &__button        
         &--prev
