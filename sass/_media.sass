@@ -11,6 +11,9 @@
         width: 100%
         height: 100%
         object-fit: cover
+  .card
+    width: 21vw
+    height: 21vw
 @media (max-width: 991px)
   .container, 
   .newsletter-wrapper
@@ -79,6 +82,18 @@
       font-size: 30px
       line-height: 38px
       margin-bottom: 50px
+  .activities
+    padding-top: 40px
+    padding-bottom: 60px
+    &-wrapper
+      flex-wrap: wrap
+      justify-content: space-evenly
+      column-gap: 20px
+    &__card
+      margin-bottom: 20px
+    .card
+      width: 339px
+      height: 255px
 @media (max-width: 767px)
   .container
     max-width: 92%
@@ -136,8 +151,8 @@
       margin-bottom: 37px
     &-wrapper
       max-width: 92%
-      flex-direction: column
-      align-items: start
+      // flex-direction: column
+      // align-items: start
     &-title    
       font-size: 20px
       line-height: 25px
@@ -168,7 +183,12 @@
       font-size: 18px
       line-height: 22px
       margin-bottom: 42px
-
+  .activities
+    padding-top: 30px
+    &__title
+      margin-bottom: 38px      
+      font-size: 18px
+      line-height: 22px
 @media (max-width: 575px)
   .container
     max-width: 92%
@@ -180,6 +200,16 @@
   .hotel
     &-slider
       height: 250px
+  .newsletter
+    height: 319px
+    padding: 65px 0 83px 7px
+    &-wrapper
+      flex-direction: column
+      align-items: start      
+  .card
+    margin-bottom: 23px
+    width: 88vw
+    height: 255px
 @media (max-width: 320px)
   .container
     max-width: 87%  
@@ -208,9 +238,6 @@
     margin: auto
     width: 280px
     height: 172px
-  .newsletter
-    height: 319px
-    padding: 65px 0 83px 7px
   .reviews
     &-slider      
       &__button        

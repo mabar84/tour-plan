@@ -1041,6 +1041,92 @@ input, button {
   text-align: justify;
 }
 
+.activities {
+  padding: 40px 0 90px 0;
+}
+
+.activities__title {
+  margin-bottom: 57px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.activities-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card {
+  padding: 24px 26px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 255px;
+  height: 255px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  z-index: -1;
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  z-index: -2;
+}
+
+.card__title {
+  margin-top: auto;
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.card__button {
+  padding: 7px 22px;
+  background-color: #ec1f46;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1199px) {
   .container {
     max-width: 92%;
@@ -1054,6 +1140,10 @@ input, button {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .card {
+    width: 21vw;
+    height: 21vw;
   }
 }
 
@@ -1153,6 +1243,26 @@ input, button {
     line-height: 38px;
     margin-bottom: 50px;
   }
+  .activities {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .activities-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .activities__card {
+    margin-bottom: 20px;
+  }
+  .activities .card {
+    width: 339px;
+    height: 255px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1244,13 +1354,6 @@ input, button {
   }
   .newsletter-wrapper {
     max-width: 92%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
   }
   .newsletter-title {
     font-size: 20px;
@@ -1293,6 +1396,14 @@ input, button {
     line-height: 22px;
     margin-bottom: 42px;
   }
+  .activities {
+    padding-top: 30px;
+  }
+  .activities__title {
+    margin-bottom: 38px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1307,6 +1418,24 @@ input, button {
   }
   .hotel-slider {
     height: 250px;
+  }
+  .newsletter {
+    height: 319px;
+    padding: 65px 0 83px 7px;
+  }
+  .newsletter-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .card {
+    margin-bottom: 23px;
+    width: 88vw;
+    height: 255px;
   }
 }
 
@@ -1344,10 +1473,6 @@ input, button {
     margin: auto;
     width: 280px;
     height: 172px;
-  }
-  .newsletter {
-    height: 319px;
-    padding: 65px 0 83px 7px;
   }
   .reviews-slider__button--prev {
     top: 32px;
