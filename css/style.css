@@ -1461,6 +1461,16 @@ input, button {
         -ms-flex-align: start;
             align-items: start;
   }
+  .activities__card:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .activities__card:nth-child(4) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
   .card {
     margin-bottom: 23px;
     width: 80vw;
@@ -1534,16 +1544,6 @@ input, button {
   .reviews-slider__button--next {
     top: 32px;
     right: 120px;
-  }
-  .activities__card:nth-child(2) {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .activities__card:nth-child(4) {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
