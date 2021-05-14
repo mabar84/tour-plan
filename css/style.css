@@ -675,6 +675,7 @@ input, button {
 }
 
 .booking {
+  font-family: Nunito;
   padding-top: 23px;
   padding-right: 29px;
   padding-bottom: 38px;
@@ -708,21 +709,21 @@ input, button {
 
 .booking__start {
   font-size: 10px;
-  line-height: 14px;
+  line-height: 13.64px;
 }
 
 .booking__pricetag {
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
-  line-height: 33px;
+  line-height: 32.74px;
 }
 
 .booking__per-room {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 16.37px;
 }
 
 .booking__room {
@@ -741,9 +742,9 @@ input, button {
           justify-content: space-between;
   margin-bottom: 8px;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 16.37px;
 }
 
 .booking__description {
@@ -767,7 +768,7 @@ input, button {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 24.55px;
 }
 
 .booking__number {
@@ -784,7 +785,7 @@ input, button {
   text-decoration: none;
   font-weight: 600;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 24.55px;
 }
 
 .booking__num {
@@ -796,7 +797,7 @@ input, button {
   min-height: 45px;
   font-weight: 600;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 19.1px;
   border-radius: 4px;
   background-color: #ec1f46;
   border: none;
@@ -1107,8 +1108,8 @@ input, button {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -2;
 }
 
@@ -1126,6 +1127,7 @@ input, button {
   padding: 7px 22px;
   background-color: #ec1f46;
   color: #ffffff;
+  font-family: Nunito;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -1149,9 +1151,41 @@ input, button {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .card {
-    width: 21vw;
-    height: 21vw;
+  .activities {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .activities-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-column-gap: 1vw;
+            column-gap: 1vw;
+  }
+  .activities__card {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+
+@media (max-width: 1050px) {
+  .activities {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .activities-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .activities__card {
+    margin-bottom: 20px;
+    width: 44vw;
+    height: 33vw;
   }
 }
 
@@ -1257,22 +1291,6 @@ input, button {
   .activities {
     padding-top: 40px;
     padding-bottom: 60px;
-  }
-  .activities-wrapper {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-column-gap: 20px;
-            column-gap: 20px;
-  }
-  .activities__card {
-    margin-bottom: 20px;
-  }
-  .activities .card {
-    width: 339px;
-    height: 255px;
   }
 }
 
@@ -1445,14 +1463,21 @@ input, button {
   }
   .card {
     margin-bottom: 23px;
-    width: 88vw;
+    width: 80vw;
+    height: 60vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 280px;
     height: 255px;
   }
 }
 
 @media (max-width: 320px) {
   .container {
-    max-width: 87%;
+    max-width: 87.5%;
   }
   .hotel {
     padding-bottom: 15px;
@@ -1509,6 +1534,16 @@ input, button {
   .reviews-slider__button--next {
     top: 32px;
     right: 120px;
+  }
+  .activities__card:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .activities__card:nth-child(4) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
