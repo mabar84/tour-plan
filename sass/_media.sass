@@ -23,17 +23,26 @@
       height: 22vw
 
 @media (max-width: 1050px)
-  .activities
-    padding-top: 40px
-    padding-bottom: 60px
-    &-wrapper
-      flex-wrap: wrap
-      justify-content: space-evenly
-    &__card  
-      margin-bottom: 20px
-      width: 44vw
-      height: 33vw
+  .packages
+    margin-bottom: 35px
+    &-title
+      margin-bottom: 35px       
+    &-grid
+      justify-content: center
+      grid-template-columns: repeat( 2, minmax(280px, 350px))
+      grid-template-rows: repeat( 3, minmax(400px, 500px))
+      gap: 30px
 
+  .activities
+  padding-top: 40px
+  padding-bottom: 60px
+  &-wrapper
+    flex-wrap: wrap
+    justify-content: space-evenly
+  &__card  
+    margin-bottom: 20px
+    width: 44vw
+    height: 33vw
 @media (max-width: 991px)
   .container, 
   .newsletter-wrapper
@@ -116,7 +125,12 @@
     // .card
     //   width: 339px
     //   height: 255px
-      
+     
+  // &-grid
+  //   grid-template-columns: repeat( 2, minmax(280px, 350px))
+  //   grid-template-rows: repeat( 3, minmax(400px, 500px))
+  //   gap: 30px
+
 @media (max-width: 767px)
   .container
     max-width: 92%
@@ -212,6 +226,24 @@
       margin-bottom: 38px      
       font-size: 18px
       line-height: 22px
+
+@media (max-width: 650px)
+  .packages
+    margin-bottom: 70px
+    &-card
+      &:nth-child(1)
+        display: none  
+    &-title
+      margin-bottom: 15px
+      font-weight: 700
+      font-size: 18px
+      line-height: 22px    
+    &-grid
+      display: grid
+      grid-template-columns: repeat( 1, minmax(280px, 350px))
+      grid-template-rows: repeat( 6, minmax(400px, 500px))
+      gap: 30px
+
 @media (max-width: 575px)
   .container
     max-width: 92%
@@ -295,4 +327,14 @@
         &--next
           top: 32px
           right: 120px
- 
+  .packages
+    &-title
+      text-align: center
+      margin-bottom: 35px
+      font-weight: 600
+      font-size: 30px
+      line-height: 37.5px    
+    &-grid
+      display: grid
+      grid-template-columns: 280px
+      gap: 30px
