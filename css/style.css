@@ -415,6 +415,7 @@ input, button {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  font-style: 700;
   font-size: 14px;
   line-height: 18px;
 }
@@ -647,7 +648,7 @@ input, button {
 .rating {
   max-width: 65px;
   min-height: 45px;
-  padding-top: 4px;
+  padding: 2px 6px 9px 7px;
   text-align: center;
   color: #ffffff;
   background-color: #ec1f46;
@@ -823,6 +824,7 @@ input, button {
 
 .packages-title {
   text-align: center;
+  text-transform: uppercase;
   margin-bottom: 65px;
   font-weight: 700;
   font-size: 36px;
@@ -834,9 +836,34 @@ input, button {
   display: grid;
   -ms-grid-columns: (minmax(280px, 350px))[3];
       grid-template-columns: repeat(3, minmax(280px, 350px));
-  -ms-grid-rows: (minmax(400px, 500px))[2];
-      grid-template-rows: repeat(2, minmax(400px, 500px));
   gap: 30px;
+}
+
+.packages-bigcard {
+  -ms-grid-column: span 2;
+      grid-column-start: span 2;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  background-color: #0a223d;
+  color: #ffffff;
+}
+
+.packages-right {
+  padding: 46px 21px 30px 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .packages-card {
@@ -848,17 +875,6 @@ input, button {
   border-radius: 8px;
   background-color: #0a223d;
   color: #ffffff;
-}
-
-.packages-card__background {
-  position: absolute;
-  background-color: #0a223d;
-  border-radius: 0 0 0 0;
-  left: -14px;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
 }
 
 .packages-card__offer {
@@ -891,10 +907,7 @@ input, button {
 }
 
 .packages-card__button {
-  position: absolute;
   padding: 11px 27px 10px 26px;
-  right: 21px;
-  bottom: 25px;
   width: 120px;
   min-height: 40px;
   font-family: Nunito;
@@ -908,55 +921,92 @@ input, button {
   cursor: pointer;
 }
 
-.packages-roof__big {
+.packages-roof--big {
   position: absolute;
   top: 0;
   left: 0;
-  width: 366px;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-.packages-description {
-  margin: 0 21px 34px 30px;
-  max-width: 299px;
-  min-height: 165px;
+.packages-roof--big button {
+  display: none;
+}
+
+.packages-info {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 22.5px;
+  font-size: 14px;
+  line-height: 22.48px;
 }
 
 .packages-basement {
-  position: relative;
-  padding-left: 32px;
+  padding: 30px 21px 25px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.packages-description__map-pin {
+  margin-right: 14px;
+}
+
+.packages-description__user {
+  margin-right: 14px;
+}
+
+.packages-description__home {
+  margin-right: 14px;
 }
 
 .packages-name {
-  margin-top: 30px;
-  margin-bottom: 23px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 22px;
-}
-
-.packages-name__description {
-  margin: 46px 0 27px 29px;
+  line-height: 22.6px;
 }
 
 .packages-booking {
-  margin-bottom: 24px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 30px 1fr;
-      grid-template-columns: 30px 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  min-height: 67px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+}
+
+.packages-booking ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.packages-booking__description {
+  margin: 0;
+  padding: 0;
+}
+
+.packages-booking__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .packages-price {
@@ -967,14 +1017,25 @@ input, button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .packages__old-price {
   margin-bottom: 5px;
-  text-decoration: line-through;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
+}
+
+.packages__old-price:before {
+  content: '';
+  position: absolute;
+  width: 17%;
+  height: 17%;
+  background-image: url(../img/strikethrough.svg);
+  background-repeat: no-repeat;
 }
 
 .packages__pricetag {
@@ -1752,9 +1813,9 @@ input, button {
   .packages-title {
     text-align: center;
     margin-bottom: 35px;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 37.5px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.6px;
   }
   .packages-grid {
     display: -ms-grid;
