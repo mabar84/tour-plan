@@ -15,12 +15,15 @@
     padding-top: 40px
     padding-bottom: 60px
     &-wrapper
-      flex-wrap: wrap
+      // flex-wrap: wrap
       justify-content: space-between
       column-gap: 1vw
     &__card  
       width: 22vw
       height: 22vw
+  // .footer
+  //   &__input
+  //     flex-basis: 100%
 
 @media (max-width: 1050px)
   .packages
@@ -43,6 +46,9 @@
     margin-bottom: 20px
     width: 44vw
     height: 33vw
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 991px)
   .container, 
   .newsletter-wrapper
@@ -114,22 +120,72 @@
       line-height: 38px
       margin-bottom: 50px
   .activities
-    padding-top: 40px
-    padding-bottom: 60px
-    // &-wrapper
-    //   flex-wrap: wrap
-    //   justify-content: space-evenly
-    //   column-gap: 20px
-    // &__card
-    //   margin-bottom: 20px
-    // .card
-    //   width: 339px
-    //   height: 255px
+    padding-top: 50px
+    padding-bottom: 51px
+    &-wrapper
+      flex-wrap: wrap
+      justify-content: space-evenly
+      column-gap: 20px
+    &__card
+      margin-bottom: 20px
+    .card
+      width: 339px
+      height: 255px
      
   // &-grid
   //   grid-template-columns: repeat( 2, minmax(280px, 350px))
   //   grid-template-rows: repeat( 3, minmax(400px, 500px))
   //   gap: 30px
+  .footer
+    padding-top: 38px
+    &-wrapper
+      padding-top: 0px
+      // grid-template-columns: 1fr 10px 1fr 10px 1fr 10px
+      grid-template-columns: repeat (6, 1fr)
+      // grid-template-columns: repeat (6, min-content)
+      // grid-template-columns: repeat (6, minmax(min-content, 1fr))
+      // gap: 5px
+      // grid-row-gap: 1px
+      // grid-column-gap: 10px
+    &__title
+      margin: 3px 0 19px 0
+      font-size: 18px
+      line-height: 22,59px
+    &__input
+      flex-basis: 49%
+    &__logo
+      margin-top: 35px
+      width: 104px
+      height: 110px
+      grid-row: 1 / 2
+      grid-column: span 2
+    &__social
+      &-network
+        display: flex
+        align-items: start
+        justify-content: space-around
+        grid-row: 1 / 2
+        grid-column-start: span 4        
+        align-self: center
+        &-links
+          display: flex      
+          align-items: center
+          justify-content: space-between
+          min-width: 83px
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__additional
+      grid-column: 4
+    &__legal
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+      &-form
+        grid-column: span 5
+        grid-row: 4
 
 @media (max-width: 767px)
   .container
@@ -226,6 +282,9 @@
       margin-bottom: 38px      
       font-size: 18px
       line-height: 22px
+  .footer
+    &__input
+      flex-basis: 100%
 
 @media (max-width: 650px)
   .packages
@@ -270,6 +329,32 @@
     margin-bottom: 23px
     width: 80vw
     height: 60vw
+  .footer
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__additional
+      grid-row: 3
+      grid-column: 1
+    &__categories
+      grid-row: 4
+      grid-column: 1
+    &__legal
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
   
 @media (max-width: 400px)  
   .card    
