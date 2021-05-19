@@ -141,9 +141,9 @@
     &-wrapper
       padding-top: 0px
       // grid-template-columns: 1fr 10px 1fr 10px 1fr 10px
-      grid-template-columns: repeat (6, 1fr)
+      // grid-template-columns: repeat (6, 1fr)
       // grid-template-columns: repeat (6, min-content)
-      // grid-template-columns: repeat (6, minmax(min-content, 1fr))
+      grid-template-columns: repeat (6, minmax(min-content, 1fr))
       // gap: 5px
       // grid-row-gap: 1px
       // grid-column-gap: 10px
@@ -176,7 +176,7 @@
       grid-row: 2 / 3
       grid-column: span 2
     &__additional
-      grid-column: 4
+      grid-column: 2
     &__legal
       grid-column: span 2
     &__contact
@@ -190,9 +190,52 @@
 @media (max-width: 767px)
   .container
     max-width: 92%
+  body
+    padding-top: 95px
   .navbar
-    &__search, &-menu, &__user
+    &__mobile
+      &--fixed
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        z-index: 2
+    &__user, &__search
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center
+    &-bottom
       display: none
+      position: fixed
+      top: 70px
+      right: 0
+      bottom: 0
+      left: 0
+      padding-top: 10px 
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      padding-top: 22px
+      &__item
+        margin-bottom: 17px
+        &--mobile
+          &--visible
+            display: block
+  .search
+    margin-left: 0
+    margin-bottom: 19px
+    width: 245px
+      
+      // display: block
+      // margin: auto
+      // align-self: center
+      // justify-content: center
   .menu
     &-button
       display: flex
@@ -209,6 +252,13 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-top: 10px
+        margin-bottom: 9px
+        margin-left: 0
   .stars
     flex-basis: 23%
   .hotel
