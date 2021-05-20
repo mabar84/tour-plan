@@ -100,6 +100,10 @@
     height: 210px
   .newsletter
     padding-top: 71px
+  .packages
+    &-title
+      font-size: 30px
+      line-height: 38px 
   .reviews
     padding: 40px 0 60px 0
     &-slider
@@ -193,7 +197,7 @@
   body
     padding-top: 95px
   .navbar
-    &__mobile
+    &--mobile
       &--fixed
         position: fixed
         top: 0
@@ -339,19 +343,57 @@
 @media (max-width: 650px)
   .packages
     margin-bottom: 70px
+    &-title
+      font-size: 18px
+      line-height: 23px
     &-card
       &:nth-child(1)
-        display: none  
-    &-title
-      margin-bottom: 15px
-      font-weight: 700
-      font-size: 18px
-      line-height: 22px    
-    &-grid
-      display: grid
-      grid-template-columns: repeat( 1, minmax(280px, 350px))
-      grid-template-rows: repeat( 6, minmax(400px, 500px))
-      gap: 30px
+        grid-template-columns: none
+        grid-template-rows: 1fr 1fr
+        grid-column-start: span 1        
+        & .packages             
+            &-star, &-text
+              display: none
+            &-info
+              padding: 30px 21px 25px 32px
+            &__image
+              // display: none
+              // width: 100%
+              max-height: 250px
+              // max-height: 120px
+            &-card
+              &__offer                
+                padding: 4px 9px
+                width: 60px
+                min-height: 18px
+                top: 26px
+                left: 0              
+                font-size: 8px
+                line-height: 10px      
+
+@media (max-width: 600px)  
+  .packages      
+    &-grid      
+      grid-template-columns: 85vw
+      gap: 20px
+    &-info
+      // display: none
+      // padding-left: 50px
+      // padding-right: 50px
+      
+      // display: flex
+      // flex-direction: row
+      // justify-content: space-around
+      // align-items: center
+      // justify-content: center
+      // padding-left: 50px
+    // &-card
+    //   &:nth-child(5)
+    //     & .packages            
+    //         &-card
+    //           &-info
+    //             display: none
+    //             padding: 10vw                
 
 @media (max-width: 575px)
   .container
@@ -461,15 +503,4 @@
           left: 116px
         &--next
           top: 32px
-          right: 120px
-  .packages
-    &-title
-      text-align: center
-      margin-bottom: 35px
-      font-weight: 700
-      font-size: 18px
-      line-height: 23.6px    
-    &-grid
-      display: grid
-      grid-template-columns: 280px
-      gap: 30px
+          right: 120px  
