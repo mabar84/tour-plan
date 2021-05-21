@@ -8,27 +8,15 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$email = $_POST['email'];
 
-
-// параметры проверяются только если одна из форм активирована
 // Формирование самого письма
-if ( !empty($email) ) {
-  $title = "Подписка на рассылку";
-  $body = "
-  <h2>Новый абонент!</h2>
-  <b>Электронная почта абонента:</b><br>$email
-  ";    
-}
- else {
-  $title = "Новое сообщение Best Tour Plan";
-  $body = "
-  <h2>Новое сообщение</h2>
-  <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
-  <b>Сообщение:</b><br>$message
-  ";         
-}
+$title = "Новое сообщение Best Tour Plan";
+$body = "
+<h2>Новое сообщение</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+<b>Сообщение:</b><br>$message
+";
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
