@@ -1987,6 +1987,7 @@ input, button {
     padding-top: 10px;
   }
   .navbar-bottom--visible {
+    overflow: scroll;
     display: block;
   }
   .navbar-menu {
