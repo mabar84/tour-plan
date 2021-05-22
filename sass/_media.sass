@@ -14,22 +14,81 @@
   .activities
     padding-top: 40px
     padding-bottom: 60px
-    &-wrapper
-      // flex-wrap: wrap
+    &-wrapper      
       justify-content: space-between
       column-gap: 1vw
     &__card  
       width: 22vw
       height: 22vw
-  // .footer
-  //   &__input
-  //     flex-basis: 100%
+  .footer
+    padding-top: 71px 
+    &__logo
+      margin-top: 0
+      margin-left: -2px
+      width: 106px
+      height: 110px
+      grid-row: 1 / 1
+      grid-column: 1 / 1
+    &-wrapper
+      margin-bottom: 54px
+      grid-template-columns: repeat (3, max-content)
+      grid-template-rows: repeat (5, max-content)
+      row-gap: 47px
+      column-gap: 27px
+    &__categories
+      max-width: 162px
+      grid-row: 2 / 3
+      grid-column: 1 / 2
+    &__additional
+      max-width: 260px
+      margin-left: -40px
+      grid-row: 2 / 2
+      grid-column: 2 / 3
+    &__social-network     
+      padding-top: 33px
+      margin-left: -38px
+      justify-content: center
+      align-self: center
+      grid-row: 1 / 2
+      grid-column: 1 / 4
+    &__legal      
+      padding: 0
+      padding-left: 12px
+      max-width: 202px
+      grid-row: 2 / 2
+      grid-column: 3 / 4
+    &__contact-details
+      max-width: 493px
+      grid-row: 3 / 3
+      grid-column: 1 / 4
+    &__title
+      margin-top: 3px
+      margin-bottom: 17px
+      grid-column: 1 / 3
+      &--mb-3
+        margin-top: 15px
+        margin-bottom: 25px
+    &__icon
+      width: 90%
+      height: 90%
+      margin-left: 5px
+    &__message
+      width: 539px
+      grid-row: 4
+      grid-column: 1 / 5  
+    &__input
+      grid-column: 1 / 2
+    &__button
+      grid-row: 5 / 5
+      grid-column: 1 / 1
+    &-payments
+      margin: 0
+      margin-left: 2px
+      justify-content: space-between
 
 @media (max-width: 1050px)
   .packages
-    margin-bottom: 35px
-    // &-title
-    //   margin-bottom: 35px       
+    margin-bottom: 35px      
     &-grid
       justify-content: center
       grid-template-columns: repeat( 2, minmax(280px, 350px))
@@ -37,8 +96,8 @@
       gap: 30px
 
   .activities
-  padding-top: 40px
-  padding-bottom: 60px
+    padding-top: 40px
+    padding-bottom: 60px
   &-wrapper
     flex-wrap: wrap
     justify-content: space-evenly
@@ -46,9 +105,7 @@
     margin-bottom: 20px
     width: 44vw
     height: 33vw
-  .footer
-    &__input
-      flex-basis: 100%
+  
 @media (max-width: 991px)
   .container, 
   .newsletter-wrapper
@@ -135,62 +192,7 @@
     .card
       width: 339px
       height: 255px
-     
-  // &-grid
-  //   grid-template-columns: repeat( 2, minmax(280px, 350px))
-  //   grid-template-rows: repeat( 3, minmax(400px, 500px))
-  //   gap: 30px
-  .footer
-    padding-top: 38px
-    &-wrapper
-      padding-top: 0px
-      // grid-template-columns: 1fr 10px 1fr 10px 1fr 10px
-      // grid-template-columns: repeat (6, 1fr)
-      // grid-template-columns: repeat (6, min-content)
-      grid-template-columns: repeat (6, minmax(min-content, 1fr))
-      // gap: 5px
-      // grid-row-gap: 1px
-      // grid-column-gap: 10px
-    &__title
-      margin: 3px 0 19px 0
-      font-size: 18px
-      line-height: 22,59px
-    &__input
-      flex-basis: 49%
-    &__logo
-      margin-top: 35px
-      width: 104px
-      height: 110px
-      grid-row: 1 / 2
-      grid-column: span 2
-    &__social
-      &-network
-        display: flex
-        align-items: start
-        justify-content: space-around
-        grid-row: 1 / 2
-        grid-column-start: span 4        
-        align-self: center
-        &-links
-          display: flex      
-          align-items: center
-          justify-content: space-between
-          min-width: 83px
-    &__categories
-      grid-row: 2 / 3
-      grid-column: span 2
-    &__additional
-      grid-column: 2
-    &__legal
-      grid-column: span 2
-    &__contact
-      &-details
-        grid-column: span 5
-        grid-row: 3
-      &-form
-        grid-column: span 5
-        grid-row: 4
-
+  
 @media (max-width: 767px)
   .container
     max-width: 92%
@@ -235,11 +237,7 @@
     margin-left: 0
     margin-bottom: 19px
     width: 245px
-      
-      // display: block
-      // margin: auto
-      // align-self: center
-      // justify-content: center
+  
   .menu
     &-button
       display: flex
@@ -298,8 +296,6 @@
       margin-bottom: 37px
     &-wrapper
       max-width: 92%
-      // flex-direction: column
-      // align-items: start
     &-title    
       font-size: 20px
       line-height: 25px
@@ -336,13 +332,106 @@
       margin-bottom: 38px      
       font-size: 18px
       line-height: 22px
+  
   .footer
+    padding-top: 67px 
+    &__logo
+      margin-top: 0
+      margin-left: -2px      
+      width: 106px
+      height: 110px
+      grid-row: 1
+      grid-column: 1
+    &-wrapper
+      margin-bottom: 28px
+      grid-template-columns: 1fr
+      grid-template-rows: auto
+      row-gap: 21px
+      column-gap: 0
+    &__categories
+      margin: 0
+      grid-row: 5
+      grid-column: 1
+      max-width: 162px      
+    &__additional
+      margin: 0
+      padding: 0
+      grid-row: 4
+      grid-column: 1
+      max-width: 260px            
+    &__social-network
+      padding-top: 21px
+      padding-left: 0
+      margin: 0
+      grid-row: 2
+      grid-column: 1
+      display: flex
+      flex-wrap: wrap
+      justify-content: start      
+    &__legal
+      padding-top: 5px      
+      padding-left: 0
+      margin: 0
+      grid-row: 3
+      grid-column: 1
+    &__contact-form      
+    &__contact-details      
+      margin: 0
+      grid-row: 6
+      grid-column: 1
+    &__title
+      margin-bottom: 21px
+      &--mb-3
+        margin-top: 21px
+        margin-bottom: 24px
+    &__contact-form h3
+      margin-top: 18px
+      margin-bottom: 18px
+    &__item
+      margin-right: 0px
+      &--mb-2
+        margin-left: 1px
+    &__text
+      margin-bottom: 20px
+    &__ul
+    &__icon
+      margin-left: 10px
+      margin-right: 20px     
+      width: 19px
+      height: 19px
+      &-wrapper        
+        padding: 0
+        margin: 0
+        width: 29px
+    &__message      
+      margin-bottom: 15px
+      grid-row: 7
+      grid-column: 1
+      width: 100%
     &__input
-      flex-basis: 100%
+      flex-basis: 100%      
+      grid-column: 1
+    &__button
+      grid-row: 8
+      grid-column: 1
+      order: 2
+    &__info        
+      min-width: 280px   
+      margin-bottom: 14px   
+    &-payments
+      display: block
+      margin-left: -2px
+      &__text
+        display: block
+        margin-bottom: 10px        
+        font-size: 11.8px
+        width: 280px
+      &__image
+        margin-left: 1px
 
 @media (max-width: 650px)
   .packages
-    margin-bottom: 35px
+    margin-bottom: 61px
     &-grid      
       grid-template-columns: minmax(280px, 400px)
       gap: 20px
@@ -420,6 +509,7 @@
       flex-direction: column
       align-items: start
   .activities
+    padding-bottom: 37px
     &__card:nth-child(2)
       order: 1
     &__card:nth-child(4)
@@ -428,32 +518,32 @@
     margin-bottom: 23px
     width: 80vw
     height: 60vw
-  .footer
-    &-wrapper
-      grid-template-columns: 1fr
-    &__logo
-      grid-row: 1
-      grid-column: 1
-    &__social
-      &-network
-        grid-row: 2
-        grid-column: 1
-    &__additional
-      grid-row: 3
-      grid-column: 1
-    &__categories
-      grid-row: 4
-      grid-column: 1
-    &__legal
-      grid-row: 5
-      grid-column: 1
-    &__contact
-      &-details
-        grid-row: 6
-        grid-column: 1
-      &-form
-        grid-row: 7
-        grid-column: 1
+  // .footer
+  //   &-wrapper
+  //     grid-template-columns: 1fr
+  //   &__logo
+  //     grid-row: 1
+  //     grid-column: 1
+  //   &__social
+  //     &-network
+  //       grid-row: 2
+  //       grid-column: 1
+  //   &__additional
+  //     grid-row: 3
+  //     grid-column: 1
+  //   &__categories
+  //     grid-row: 4
+  //     grid-column: 1
+  //   &__legal
+  //     grid-row: 5
+  //     grid-column: 1
+  //   &__contact
+  //     &-details
+  //       grid-row: 6
+  //       grid-column: 1
+  //     &-form
+  //       grid-row: 7
+  //       grid-column: 1
   
 @media (max-width: 400px)  
   .card    
