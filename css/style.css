@@ -392,6 +392,8 @@ input, button {
   background-color: #ec1f46;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar {
@@ -487,6 +489,7 @@ input, button {
   height: 100%;
   border: none;
   background: #ec1f46;
+  cursor: pointer;
 }
 
 .user {
@@ -1186,6 +1189,7 @@ input, button {
   border: none;
   background-color: #ec1f46;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .reviews {
@@ -1553,6 +1557,11 @@ input, button {
   margin-bottom: 20px;
 }
 
+.footer__item--mb-2 a {
+  text-decoration: none;
+  color: #BDBDBD;
+}
+
 .footer__icon {
   width: 100%;
   height: 100%;
@@ -1735,6 +1744,7 @@ input, button {
   width: 100%;
   min-height: 123px;
   margin-bottom: 15px;
+  resize: none;
 }
 
 .modal__info {
@@ -1892,6 +1902,20 @@ input, button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .modal__dialog {
+    padding: 25px 5vw;
+    top: 10px;
+    bottom: 10px;
+    background-color: #0a223d;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .modal__dialog--visible {
+    overflow: scroll;
+  }
+  .modal__form {
+    width: 90%;
   }
 }
 
@@ -2438,6 +2462,13 @@ input, button {
     left: 0;
     font-size: 8px;
     line-height: 10px;
+  }
+  .modal__dialog {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .modal__button {
+    margin-bottom: 20px;
   }
 }
 

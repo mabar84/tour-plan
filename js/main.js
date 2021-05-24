@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     keyboard: {
       enabled: true,
-      onlyInViewport: false,
+      onlyInViewport: true,
     },
   });
 
@@ -35,6 +35,12 @@ $(document).ready(function () {
   var closeModalButton = $(".modal__close");
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
+  // $(document).keydown(function (e) {
+  //   if (e.which == 27) {
+  //     closeModal;
+  //   }
+  // });
+  // on("keypress", closeModal);
 
   function openModal() {
     var modalOverlay = $(".modal__overlay");
@@ -42,6 +48,7 @@ $(document).ready(function () {
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
   }
+
   function closeModal(event) {
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
