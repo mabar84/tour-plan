@@ -74,8 +74,9 @@
       margin-left: 5px
     &__message
       width: 539px
-      grid-row: 4
-      grid-column: 1 / 5  
+      grid-row: 4      
+      // grid-column: 1 / 5
+      grid-column-start: span 3
     &__input
       grid-column: 1 / 2
     &__button
@@ -195,7 +196,7 @@
       line-height: 38px
       margin-bottom: 50px
   .activities
-    padding-top: 50px
+    padding-top: 40px
     padding-bottom: 51px
     &-wrapper
       flex-wrap: wrap
@@ -214,7 +215,7 @@
   .container
     max-width: 92%
   body
-    padding-top: 95px
+    padding-top: 70px
   .navbar
     &--mobile
       &--fixed
@@ -454,6 +455,7 @@
       grid-template-columns: minmax(280px, 400px)
       gap: 20px
     &-title
+      margin-top: 0
       margin-bottom: 15px
       font-size: 18px
       line-height: 23px    
@@ -464,7 +466,7 @@
       &:nth-child(1)
         grid-template-columns: none
         grid-template-rows: 1fr 1fr
-        grid-column-start: span 1        
+        grid-column-start: span 1     
         & .packages             
             &-star, &-text
               display: none
@@ -524,6 +526,7 @@
   .logo
     width: 99px
   .hotel
+    padding-bottom: 20px
     &-slider
       height: 250px
   .newsletter
@@ -577,7 +580,7 @@
   .container
     max-width: 87.5%  
   .hotel
-    padding-bottom: 15px
+    padding-bottom: 20px
     &-info
       padding-bottom: 19px
     &__slider

@@ -1881,9 +1881,8 @@ input, button {
     width: 539px;
     -ms-grid-row: 4;
     grid-row: 4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1 / 5;
+    -ms-grid-column: span 3;
+        grid-column-start: span 3;
   }
   .footer__input {
     -ms-grid-column: 1;
@@ -2055,7 +2054,7 @@ input, button {
     margin-bottom: 50px;
   }
   .activities {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 51px;
   }
   .activities-wrapper {
@@ -2081,7 +2080,7 @@ input, button {
     max-width: 92%;
   }
   body {
-    padding-top: 95px;
+    padding-top: 70px;
   }
   .navbar--mobile--fixed {
     position: fixed;
@@ -2432,6 +2431,7 @@ input, button {
     gap: 20px;
   }
   .packages-title {
+    margin-top: 0;
     margin-bottom: 15px;
     font-size: 18px;
     line-height: 23px;
@@ -2482,6 +2482,9 @@ input, button {
   .logo {
     width: 99px;
   }
+  .hotel {
+    padding-bottom: 20px;
+  }
   .hotel-slider {
     height: 250px;
   }
@@ -2530,7 +2533,7 @@ input, button {
     max-width: 87.5%;
   }
   .hotel {
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
   .hotel-info {
     padding-bottom: 19px;
