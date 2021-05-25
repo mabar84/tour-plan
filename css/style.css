@@ -396,6 +396,12 @@ input, button {
   text-decoration: none;
 }
 
+.invalid {
+  color: #ec1f46;
+  font-weight: bold;
+  font-style: italic;
+}
+
 .navbar {
   background-color: #ffffff;
 }
@@ -421,6 +427,7 @@ input, button {
 .navbar__search {
   margin-right: auto;
   margin-left: 108px;
+  z-index: 150;
 }
 
 .navbar-bottom {
@@ -515,6 +522,12 @@ input, button {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+.navbar__search label {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
 }
 
 .breadcrumb-list {
@@ -1192,6 +1205,12 @@ input, button {
   cursor: pointer;
 }
 
+.subscribe label {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+
 .reviews {
   padding: 40px 0 70px 0;
 }
@@ -1599,6 +1618,10 @@ input, button {
 }
 
 .footer__input {
+  width: 100%;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
@@ -1707,8 +1730,8 @@ input, button {
   left: 50%;
   max-width: 478px;
   background-color: #0a223d;
-  -webkit-transform: translate(-50.5%, -53%);
-          transform: translate(-50.5%, -53%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #ffffff;
   border-radius: 8px;
   z-index: 101;
@@ -1733,7 +1756,7 @@ input, button {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1743,8 +1766,12 @@ input, button {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   resize: none;
+}
+
+.modal__button {
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1884,7 +1911,7 @@ input, button {
     -ms-grid-column: span 3;
         grid-column-start: span 3;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
@@ -1902,16 +1929,20 @@ input, button {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .modal__form {
+    margin-right: auto;
+    margin-left: auto;
+  }
   .modal__dialog {
-    padding: 25px 5vw;
+    padding: 25px 30px;
     top: 10px;
-    bottom: 10px;
     background-color: #0a223d;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
   .modal__dialog--visible {
-    overflow: scroll;
+    max-height: 100%;
+    overflow: auto;
   }
   .modal__form {
     width: 90%;
@@ -2073,6 +2104,11 @@ input, button {
     width: 339px;
     height: 255px;
   }
+  .modal__close {
+    padding: 17px 18px;
+    top: 0;
+    right: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2116,7 +2152,7 @@ input, button {
     padding-top: 10px;
   }
   .navbar-bottom--visible {
-    overflow: scroll;
+    overflow: auto;
     display: block;
   }
   .navbar-menu {
@@ -2387,7 +2423,7 @@ input, button {
     grid-column: 1;
     width: 100%;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     -ms-grid-column: 1;

@@ -56,4 +56,31 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
   }
+
+  // Обработка форм
+
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: "At least 2 characters required!",
+        },
+        phone: {
+          required: "Specify your phone number",
+        },
+        email: {
+          required: "Please specify your email",
+          email: "Format: name@domain.com",
+        },
+        search: {
+          required: "Please enter query",
+        },
+      },
+    });
+  });
+
+  $(".phone_with_ddd").mask("+7(000) 000-00-00");
 });

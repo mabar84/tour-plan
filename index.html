@@ -24,8 +24,8 @@
           <img src="img/hotizontal-logo.svg" alt="logo: Perfect vacation" class="logo__image">
         </a>
 
-        <form action="#" class="search navbar__search navbar__search--mobile--hidden">
-          <input type="text" class="search__input" placeholder="Search Location">
+        <form action="#" class="search navbar__search navbar__search--mobile--hidden form">
+          <input type="text" class="search__input" placeholder="Search Location" name="search" required>
           <button class="search__button">
             <img src="img/search.svg" alt="Icon: search">
           </button>
@@ -58,8 +58,8 @@
             </a>
           </li>
           <li class="navbar-menu__item navbar-menu__item--mobile--visible">
-            <form action="#" class="search navbar__search navbar__search--mobile--visible">
-              <input type="text" class="search__input" placeholder="Search Location">
+            <form action="#" class="search navbar__search navbar__search--mobile--visible form">
+              <input type="text" class="search__input" placeholder="Search Location" name="search" required>
               <button class="search__button">
                 <img src="img/search.svg" alt="Icon: search">
               </button>
@@ -438,8 +438,8 @@
         subscribe to our
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
-      <form action="send.php" method="POST" class="subscribe newsletter__subscribe">
-        <input type="text" class="subscribe__input" placeholder="Your email address" name="email">
+      <form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
+        <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
         <button class="subscribe__button">Send</button>
       </form>
     </div>
@@ -717,13 +717,19 @@
 
         <div class="footer__contact-form">
           <h3 class="footer__title">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required
+                minlength="2">
+            </div>
+
+            <div class="footer__input-group">
+              <input type="tel" class="input footer__input phone_with_ddd" placeholder="Phone Number*" name="phone"
+                required>
+            </div>
             <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button" type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
-
           </form>
         </div>
         <!-- /.footer__contact-form -->
@@ -743,26 +749,25 @@
   </footer>
 
   <div class="modal">
-
     <div class="modal__overlay">
-
     </div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
 
       <h3 class="modal__title">Booking</h3>
-      <form action="send.php" method="POST" class="modal__form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-        <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
-        <input type="text" class="input modal__input" placeholder="Email*" name="email">
+
+      <form action="send.php" method="POST" class="modal__form form">
+        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2">
+        <input type="tel" class="input modal__input phone_with_ddd" placeholder="Phone Number*" name="phone" required>
+        <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
         <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
         <button class="button modal__button" type="submit">Send</button>
         <span class="modal__info">* Required Fields</span>
       </form>
+
       <a class="modal__close" href="#">
         <img src="img/close.svg" alt="close">
       </a>
-
 
     </div>
     <!-- /.modal__dialog -->
@@ -772,6 +777,8 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

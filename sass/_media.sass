@@ -78,7 +78,8 @@
       // grid-column: 1 / 5
       grid-column-start: span 3
     &__input
-      grid-column: 1 / 2
+      &-group
+        grid-column: 1 / 2
     &__button
       grid-row: 5 / 5
       grid-column: 1 / 1
@@ -87,19 +88,19 @@
       margin-left: 2px
       justify-content: space-between
   .modal
+    &__form
+      margin-right: auto
+      margin-left: auto
     &__dialog
-      padding: 25px 5vw      
-      // width: 80vw
+      padding: 25px 30px      
       top: 10px      
-      bottom: 10px   
       background-color: $dark    
-      transform: translateX(-50%)      
-      &--visible      
-        overflow: scroll
+      transform: translateX(-50%) 
+      &--visible   
+        max-height: 100%
+        overflow: auto
     &__form
       width: 90%
-      // min-width: 80%
-        
 
 @media (max-width: 1050px)
   .packages
@@ -210,6 +211,11 @@
   // .modal
     // &__dialog
     //   padding: 20px
+  .modal
+    &__close
+      padding: 17px 18px
+      top: 0
+      right: 0   
   
 @media (max-width: 767px)
   .container
@@ -242,7 +248,8 @@
       left: 0
       padding-top: 10px 
       &--visible
-        overflow: scroll        
+        // overflow: scroll        
+        overflow: auto    
         display: block
     &-menu
       flex-direction: column
@@ -428,8 +435,9 @@
       grid-column: 1
       width: 100%
     &__input
-      flex-basis: 100%      
-      grid-column: 1
+      &-group
+        flex-basis: 100%      
+        grid-column: 1
     &__button
       grid-row: 8
       grid-column: 1
