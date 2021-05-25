@@ -724,8 +724,8 @@
             </div>
 
             <div class="footer__input-group">
-              <input type="tel" class="input footer__input phone_with_ddd" placeholder="Phone Number*" name="phone"
-                required>
+              <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="phone" required
+                minlength="17">
             </div>
             <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button" type="submit">Send</button>
@@ -757,15 +757,28 @@
       <h3 class="modal__title">Booking</h3>
 
       <form action="send.php" method="POST" class="modal__form form">
-        <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2">
-        <input type="tel" class="input modal__input phone_with_ddd" placeholder="Phone Number*" name="phone" required>
-        <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
+        <div class="modal__input-group">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required
+            minlength="2">
+        </div>
+        <div class="modal__input-group">
+          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" required
+            minlength="17">
+        </div>
+        <div class="modal__input-group">
+          <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
+        </div>
         <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
         <button class="button modal__button" type="submit">Send</button>
         <span class="modal__info">* Required Fields</span>
       </form>
 
-      <a class="modal__close" href="#">
+      <!-- <button class="modal__close">213</button> -->
+
+      <!-- <div class="modal__close"><button></button></div> -->
+      <!-- <img src="img/close.svg" alt="close"> -->
+
+      <a class="modal__close">
         <img src="img/close.svg" alt="close">
       </a>
 

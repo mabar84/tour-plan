@@ -68,8 +68,7 @@
     color: $footer-text-color
     &--mb-2
       margin-bottom: 20px
-      & a
-        
+      & a        
         text-decoration: none
         color: $footer-text-color
   &__icon
@@ -96,6 +95,7 @@
   &__input
     width: 100%
     &-group   
+      position: relative
       margin-bottom: 15px
       flex-basis: 47%
       font-style: normal
@@ -132,3 +132,8 @@
   &__contact-form h3
       margin-top: -8px
       margin-bottom: 35px
+.footer__input-group label  
+  position: absolute  
+  bottom: 50px
+  left: 0
+  

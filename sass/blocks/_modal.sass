@@ -8,7 +8,7 @@
     line-height: 23px
     text-transform: uppercase
     text-align: center
-  &__form
+  &__form    
     display: flex
     align-items: center
     justify-content: space-between
@@ -32,13 +32,13 @@
     padding-right: 88px
     padding-bottom: 33px
     padding-left: 88px    
+    max-width: 478px
     position: fixed    
     top: 50%
-    left: 50%
-    max-width: 478px
+    left: 50%    
     background-color: $dark    
-    transform: translate(-50%, -50%)
-    // transform: translate(-50.5%, -53%)
+    // transform: translate(-50%, -50%)
+    transform: translate(-50.5%, -53%)
     color: $light
     border-radius: 8px
     z-index: 101
@@ -52,25 +52,43 @@
     position: absolute
     top: 17px
     right: 18px
-    text-decoration: none
+    // background-color: $primary    
+    // width: 150px
+    // height: 50px
+    // background-image: url(../img/close.svg)
+    // text-decoration: none
+    // background-color: none
     cursor: pointer
   &__input
     width: 100%
-    margin-top: 15px    
+    &-group
+      position: relative
+      width: 100%
+      // margin-top: 15px  
+      margin-bottom: 15px  
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+  &__message
+    width: 100%
+    min-height: 123px
+    margin-top: 0px
     font-style: normal
     font-weight: normal
     font-size: 12px
     line-height: 15px
-  &__message
-    width: 100%
-    min-height: 123px
-    margin-top: 15px
     resize: none
   &__button
     margin-top: 15px
   &__info
+    margin-top: 18px    
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: #E0E0E0 
+.modal__input-group label
+  position: absolute  
+  bottom: 50px
+  left: 0

@@ -427,7 +427,6 @@ input, button {
 .navbar__search {
   margin-right: auto;
   margin-left: 108px;
-  z-index: 150;
 }
 
 .navbar-bottom {
@@ -526,7 +525,7 @@ input, button {
 
 .navbar__search label {
   position: absolute;
-  bottom: 20px;
+  bottom: 25px;
   left: 10px;
 }
 
@@ -1622,6 +1621,7 @@ input, button {
 }
 
 .footer__input-group {
+  position: relative;
   margin-bottom: 15px;
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
@@ -1676,6 +1676,12 @@ input, button {
   margin-bottom: 35px;
 }
 
+.footer__input-group label {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+}
+
 .modal__title {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -1725,13 +1731,13 @@ input, button {
   padding-right: 88px;
   padding-bottom: 33px;
   padding-left: 88px;
+  max-width: 478px;
   position: fixed;
   top: 50%;
   left: 50%;
-  max-width: 478px;
   background-color: #0a223d;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50.5%, -53%);
+          transform: translate(-50.5%, -53%);
   color: #ffffff;
   border-radius: 8px;
   z-index: 101;
@@ -1750,13 +1756,17 @@ input, button {
   position: absolute;
   top: 17px;
   right: 18px;
-  text-decoration: none;
   cursor: pointer;
 }
 
 .modal__input {
   width: 100%;
-  margin-top: 15px;
+}
+
+.modal__input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1766,7 +1776,11 @@ input, button {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-top: 15px;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
   resize: none;
 }
 
@@ -1775,11 +1789,18 @@ input, button {
 }
 
 .modal__info {
+  margin-top: 18px;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+.modal__input-group label {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
 }
 
 @media (max-width: 1199px) {

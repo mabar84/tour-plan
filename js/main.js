@@ -70,6 +70,7 @@ $(document).ready(function () {
         },
         phone: {
           required: "Specify your phone number",
+          minlength: "Not enough numbers!",
         },
         email: {
           required: "Please specify your email",
@@ -82,5 +83,5 @@ $(document).ready(function () {
     });
   });
 
-  $(".phone_with_ddd").mask("+7(000) 000-00-00");
+  $(".phone").mask("+7(000) 000-00-00");
 });
