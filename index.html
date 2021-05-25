@@ -12,6 +12,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -194,7 +195,7 @@
             <button data-toggle="modal" class="button booking__button">View Other Options</button>
           </div>
           <!-- /.booking -->
-          <div class="map">
+          <div class="map" data-aos="zoom-in">
             <iframe class="google-map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4699.790387159697!2d98.2930819262019!3d7.891209645452317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sby!4v1620754844479!5m2!1sru!2sby"
               style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -542,25 +543,25 @@
     <div class="container">
       <h2 class="activities__title">Other Activities</h2>
       <div class="activities-wrapper">
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="600">
           <img src="img/activity-1.jpg" alt="The curious corner of chamarel" class="card__image">
           <h3 class="card__title">The curious corner <br> of chamarel</h3>
-          <button data-toggle="modal" class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button button">Book Now</button>
         </div>
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="450">
           <img src="img/activity-2.jpg" alt="Gymkhana club golf course" class="card__image">
           <h3 class="card__title">Gymkhana club golf <br> course</h3>
-          <button data-toggle="modal" class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button button">Book Now</button>
         </div>
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="300">
           <img src="img/activity-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image">
           <h3 class="card__title">Tamarind falls hiking <br> trip - full day</h3>
-          <button data-toggle="modal" class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button button">Book Now</button>
         </div>
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-up" data-aos-delay="150">
           <img src="img/activity-4.jpg" alt="The blue marine discovery quest" class="card__image">
           <h3 class="card__title">The blue marine discovery <br> quest</h3>
-          <button data-toggle="modal" class="card__button">Book Now</button>
+          <button data-toggle="modal" class="card__button button">Book Now</button>
         </div>
         <!-- /.card -->
       </div>
@@ -632,7 +633,8 @@
         <!-- /.footer__list -->
         <div class="footer__social-network">
           <h3 class="footer__title footer__title--inline">Social Network</h3>
-          <div class="footer__social-links">
+          <div class="footer__social-links" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <a href="https://www.facebook.com/" class="footer__link" target="_blank">
               <img src="img/facebook.svg" alt="icon: facebook">
             </a>
@@ -792,6 +794,7 @@
   <script src="js/parallax.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 
 </body>

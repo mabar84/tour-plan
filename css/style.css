@@ -402,6 +402,13 @@ input, button {
   font-style: italic;
 }
 
+@media (min-width: 992px) {
+  .button:hover {
+    background-color: #ffffff;
+    color: #ec1f46;
+  }
+}
+
 .navbar {
   background-color: #ffffff;
 }
