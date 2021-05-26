@@ -8,7 +8,7 @@
   <title>Perfect vacation</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
-    rel="stylesheet">
+    rel="preload">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -195,7 +195,7 @@
             <button data-toggle="modal" class="button booking__button">View Other Options</button>
           </div>
           <!-- /.booking -->
-          <div class="map" data-aos="zoom-in">
+          <div class="map" data-aos="zoom-in" data-aos-delay="900">
             <iframe class="google-map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4699.790387159697!2d98.2930819262019!3d7.891209645452317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sby!4v1620754844479!5m2!1sru!2sby"
               style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -433,7 +433,7 @@
   </section>
   <!-- /.packages -->
 
-  <section class="newsletter parallax-window" data-parallax="scroll" data-image-src="img/newsletter-bg.jpg">
+  <section class="newsletter parallax-window" data-parallax="scroll" data-image-src="img/newsletter-bg.webp">
     <div class=" newsletter-wrapper">
       <h2 class="newsletter-title newsletter__title">
         subscribe to our
@@ -690,17 +690,21 @@
               <ul class="footer__ul">
                 <li class="footer__item">
                   <span>Tel (business hours) : </span>
-                  <a href="tel:2691500">269 1500</a>
+                  <a class="for-hover" href="tel:2691500">269 1500</a>
                 </li>
                 <li class="footer__item">
                   <span>
-                    Tel (hotline) Monday - Saturday: <a href="tel:52-56-61-38">52-56-61-38</a> (08:00 am –
-                    20:00 pm)
+                    Tel (hotline) Monday - Saturday:
+                    <a class="for-hover" href="tel:52-56-61-38">52-56-61-38</a>
+                    (08:00 am – 20:00 pm)
                   </span>
                 </li>
                 <li class="footer__item">
-                  <span>Tel (hotline) Sunday: <a href="tel:52-56-61-38">52-56-61-38</a> (08:00 am – 14:00
-                    pm)</span>
+                  <span>
+                    Tel (hotline) Sunday:
+                    <a class="for-hover" href="tel:52-56-61-38">52-56-61-38</a>
+                    (08:00 am – 14:00 pm)
+                  </span>
                 </li>
               </ul>
             </li>
@@ -710,7 +714,7 @@
                 <img class="footer__icon" src="img/email.svg" alt="Icon: email.svg">
               </div>
 
-              <a href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
+              <a class="for-hover" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
             </li>
           </ul>
 

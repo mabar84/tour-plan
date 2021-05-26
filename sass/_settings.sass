@@ -47,6 +47,26 @@ input, button
   font-style: italic  
 
 @media (min-width: 992px)
-  .button:hover
+  .button:hover, .subscribe__button:hover
     background-color: $light
+    color: $primary
+    border: 1px solid $primary
+    
+  .search__button:hover
+    border-radius: 16px  
+    border: 4px solid $primary
+    background-color: $light
+    color: $primary
+    &::after      
+        content: ''
+        position: absolute
+        top: 8px
+        left: 22px
+        width: 20px
+        height: 20px
+        background-image: url(../img/search-red.svg)
+        background-repeat: no-repeat        
+  a:hover    
+    color: $primary
+  .for-hover:hover    
     color: $primary
