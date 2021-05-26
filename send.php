@@ -1,5 +1,5 @@
 <?php
-include ('password.php')
+include ('password.php');
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
@@ -14,22 +14,35 @@ $email = $_POST['email'];
 
 // параметры проверяются только если одна из форм активирована
 // Формирование самого письма
-if ( !empty($email) ) {
-  $title = "Подписка на рассылку";
-  $body = "
-  <h2>Новый абонент!</h2>
-  <b>Электронная почта абонента:</b><br>$email
-  ";    
-}
- else {
-  $title = "Новое сообщение Best Tour Plan";
-  $body = "
-  <h2>Новое сообщение</h2>
-  <b>Имя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
-  <b>Сообщение:</b><br>$message
-  ";         
-}
+
+  if ( empty($phone )) {
+    $title = "Подписка на рассылку";
+    $body = "
+    <h2>Новый абонент!</h2>
+    <b>Электронная почта абонента:</b><br>$email
+    ";    
+  }   
+  else {
+    if ( empty($email)) {
+    $title = "Сообщение Best Tour Plan";
+    $body = "
+    <h2>Новое сообщение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br>
+    <b>Сообщение:</b><br>$message
+    ";         
+    }
+    else {
+      $title = "Booking Best Tour Plan";
+      $body = "
+      <h2>Booking</h2>
+      <b>Имя:</b> $name<br>
+      <b>Телефон:</b> $phone<br>
+      <b>Электронная почта:</b><br>$email<br>
+      <b>Сообщение:</b><br>$message
+      ";
+    }
+  } 
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();

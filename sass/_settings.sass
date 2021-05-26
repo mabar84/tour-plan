@@ -47,11 +47,13 @@ input, button
   font-style: italic  
 
 @media (min-width: 992px)
-  .button:hover, .subscribe__button:hover
+  .button:hover
     background-color: $light
     color: $primary
-    border: 1px solid $primary
-    
+  .subscribe__button:hover
+    color: $primary
+    background-color: $light
+    border: 4px solid $primary
   .search__button:hover
     border-radius: 16px  
     border: 4px solid $primary
@@ -70,3 +72,5 @@ input, button
     color: $primary
   .for-hover:hover    
     color: $primary
+  .home-page
+    border: 4px solid $primary

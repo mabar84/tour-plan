@@ -24,8 +24,8 @@
           <img src="img/hotizontal-logo.svg" alt="logo: Perfect vacation" class="logo__image">
         </a>
 
-        <form action="#" class="search navbar__search navbar__search--mobile--hidden">
-          <input type="text" class="search__input" placeholder="Search Location">
+        <form action="#" class="search navbar__search navbar__search--mobile--hidden form">
+          <input type="text" class="search__input" placeholder="Search Location" name="search" required>
           <button class="search__button">
             <img src="img/search.svg" alt="Icon: search">
           </button>
@@ -58,8 +58,8 @@
             </a>
           </li>
           <li class="navbar-menu__item navbar-menu__item--mobile--visible">
-            <form action="#" class="search navbar__search navbar__search--mobile--visible">
-              <input type="text" class="search__input" placeholder="Search Location">
+            <form action="#" class="search navbar__search navbar__search--mobile--visible form">
+              <input type="text" class="search__input" placeholder="Search Location" name="search" required>
               <button class="search__button">
                 <img src="img/search.svg" alt="Icon: search">
               </button>
@@ -109,32 +109,32 @@
     <!-- /.container -->
   </nav>
   <!-- /.breadcrumb -->
+
   <section class="hotel">
     <div class="container">
       <div class="hotel-info">
         <div class="hotel-info__text">
           <div class="hotel-wrapper">
-            <h1 class="hotel-name hotel-info__name">Сообщение отправлено!</h1>
+            <h1 class="hotel-name hotel-info__name">Message sent!</h1>
           </div>
           <!-- /.hotel-wrapper -->
           <p class="hotel-description hotel-info__description">
-            Наш менеджер свяжется с Вами в течение 5 минут.
+            Our manager will contact you within 5 minutes.
           </p>
         </div>
         <!-- /.hotel-info__text -->
       </div>
-      <a class="button" href="index.html">На главную страницу</a>
+      <a class="button home-page" href="index.html">Home Page</a>
       <!-- /.hotel-info -->
     </div>
     <!-- /.container -->
   </section>
 
-
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
         <a href="index.html" class="footer__logo">
-          <img src="img/vertical-logo.svg" alt="Logo: Best Tout Plan" class="logo footer__logo">
+          <img class="footer__logo" src="img/vertical-logo.svg" alt="Logo: Best Tout Plan">
         </a>
         <div class="footer__list footer__categories">
           <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -192,7 +192,8 @@
         <!-- /.footer__list -->
         <div class="footer__social-network">
           <h3 class="footer__title footer__title--inline">Social Network</h3>
-          <div class="footer__social-links">
+          <div class="footer__social-links" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <a href="https://www.facebook.com/" class="footer__link" target="_blank">
               <img src="img/facebook.svg" alt="icon: facebook">
             </a>
@@ -245,17 +246,34 @@
                 <img class="footer__icon" src="img/contact-phone-call.svg" alt="Icon: contact-phone-call">
               </div>
 
-              Tel (business hours) : 269 1500<br>
-              Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)<br>
-              Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+              <ul class="footer__ul">
+                <li class="footer__item">
+                  <span>Tel (business hours) : </span>
+                  <a class="for-hover" href="tel:2691500">269 1500</a>
+                </li>
+                <li class="footer__item">
+                  <span>
+                    Tel (hotline) Monday - Saturday:
+                    <a class="for-hover" href="tel:52-56-61-38">52-56-61-38</a>
+                    (08:00 am – 20:00 pm)
+                  </span>
+                </li>
+                <li class="footer__item">
+                  <span>
+                    Tel (hotline) Sunday:
+                    <a class="for-hover" href="tel:52-56-61-38">52-56-61-38</a>
+                    (08:00 am – 14:00 pm)
+                  </span>
+                </li>
+              </ul>
             </li>
+
             <li class="footer__item footer__item--mb-2">
               <div class="footer__icon-wrapper">
                 <img class="footer__icon" src="img/email.svg" alt="Icon: email.svg">
               </div>
 
-
-              cherly.lawson@example.com
+              <a class="for-hover" href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
             </li>
           </ul>
 
@@ -264,13 +282,19 @@
 
         <div class="footer__contact-form">
           <h3 class="footer__title">Send us a message</h3>
-          <form action="send.php" method="POST" class="footer__form">
-            <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-            <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
-            <textarea class="footer__message" placeholder="Message" name="message"></textarea>
+          <form action="send.php" method="POST" class="footer__form form">
+            <div class="footer__input-group">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required
+                minlength="2">
+            </div>
+
+            <div class="footer__input-group">
+              <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="phone" required
+                minlength="17">
+            </div>
+            <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
             <button class="button footer__button" type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
-
           </form>
         </div>
         <!-- /.footer__contact-form -->
@@ -278,9 +302,10 @@
       <!-- /.footer-wrapper -->
       <div class="footer-payments">
         <!-- Disclaimer Conditions of use Cancellation policy -->
-        <span>Disclaimer&ensp;&ensp;Conditions of use&ensp;&ensp;Cancellation policy</span>
+        <span class="footer-payments__text">Disclaimer&ensp;&ensp;Conditions of use&ensp;&ensp;Cancellation
+          policy</span>
         <!-- <span>Conditions of use&ensp;</span>
-        <span>Cancellation policy</span> -->
+          <span>Cancellation policy</span> -->
         <img class="footer-payments__image" src="img/payments.jpg" alt="Payments">
       </div>
     </div>
@@ -288,9 +313,51 @@
     <!-- /.footer-payments -->
   </footer>
 
+  <div class="modal">
+    <div class="modal__overlay">
+    </div>
+    <!-- /.modal__overlay -->
+    <div class="modal__dialog">
+
+      <h3 class="modal__title">Booking</h3>
+
+      <form action="send.php" method="POST" class="modal__form form">
+        <div class="modal__input-group">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required
+            minlength="2">
+        </div>
+        <div class="modal__input-group">
+          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" required
+            minlength="17">
+        </div>
+        <div class="modal__input-group">
+          <input type="email" class="input modal__input" placeholder="Email*" name="email" required>
+        </div>
+        <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
+        <button class="button modal__button" type="submit">Send</button>
+        <span class="modal__info">* Required Fields</span>
+      </form>
+
+      <!-- <button class="modal__close">213</button> -->
+
+      <!-- <div class="modal__close"><button></button></div> -->
+      <!-- <img src="img/close.svg" alt="close"> -->
+
+      <a class="modal__close">
+        <img src="img/close.svg" alt="close">
+      </a>
+
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/main.js"></script>
 
 </body>
