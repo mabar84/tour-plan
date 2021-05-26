@@ -1,4 +1,5 @@
 <?php
+include ('password.php')
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
@@ -41,14 +42,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
-    $mail->Username   = 'vvt1000@mail.ru'; // Логин на почте
-    $mail->Password   = 'L2zTBisRr8BDJkxYAwHA'; // Пароль на почте
+    $mail->Username   = $username; // Логин на почте
+    $mail->Password   = $password; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('vvt1000@mail.ru', 'Иван Иванов'); // Адрес самой почты и имя отправителя
+    $mail->setFrom($useremail, 'Best Tour Plan'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('mabar@tut.by');      
+    $mail->addAddress($useremail);      
 
   // Отправка сообщения
   $mail->isHTML(true);
