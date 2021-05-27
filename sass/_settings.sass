@@ -27,7 +27,7 @@ input, button
   border: none
 .button  
   // min-width: 160px
-  // min-height: 50px    
+  // min-height: 50px   
   padding: 18px
   font-style: normal
   font-weight: bold
@@ -45,15 +45,24 @@ input, button
   color: $primary
   font-weight: bold
   font-style: italic  
+.home-page
+  min-width: 160px
+  min-height: 50px
+  margin-top: 30px
+  margin-bottom: 30px
+  display: inline-block
+  text-align: center
 
 @media (min-width: 992px)
   .button:hover
     background-color: $light
     color: $primary
+    transition-delay: 0.2s
   .subscribe__button:hover
     color: $primary
     background-color: $light
     border: 4px solid $primary
+    transition-delay: 0.2s
   .search__button:hover
     border-radius: 16px  
     border: 4px solid $primary
@@ -67,10 +76,13 @@ input, button
         width: 20px
         height: 20px
         background-image: url(../img/search-red.svg)
-        background-repeat: no-repeat        
+        background-repeat: no-repeat 
+        transition-delay: 0.3s       
   a:hover    
     color: $primary
-  .for-hover:hover    
+    transition-delay: 0.2s
+  .for-hover:hover
     color: $primary
+    transition-delay: 0.2s
   .home-page
     border: 4px solid $primary

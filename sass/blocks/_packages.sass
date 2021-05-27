@@ -15,7 +15,7 @@
     display: grid
     // grid-template-columns: repeat (3, 1fr)
     grid-template-columns: repeat( 3, minmax(280px, 350px))
-    // grid-template-rows: repeat( 2, minmax(400px, 500px))    
+    grid-template-rows: repeat( 2, minmax(400px, 500px))    
     gap: 30px  
 
   &__image
@@ -87,7 +87,7 @@
   &-info
     padding-top: 25px
     padding-right: 21px
-    padding-bottom: 32px
+    padding-bottom: 25px
     padding-left: 32px
     // padding: 27px 21px 32px 32px
     display: flex
@@ -144,13 +144,14 @@
       font-weight: 400
       font-size: 14px
       line-height: 17px
-      &:before
-        content: ''
-        position: absolute      
-        width: 17%
-        height: 17%
-        background-image: url(../img/strikethrough.svg)
-        background-repeat: no-repeat
+      text-decoration: line-through
+      // &:before
+      //   content: ''
+      //   position: absolute      
+      //   width: 17%
+      //   height: 17%
+      //   background-image: url(../img/strikethrough.svg)
+      //   background-repeat: no-repeat
     &__tag
       font-weight: 700
       font-size: 24px
